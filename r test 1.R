@@ -62,13 +62,9 @@ model <- lm(blue_team_stats_first_100_dropped$blueKills~blue_team_stats_first_10
 model <- lm(blueKills~.,blue_team_stats_first_100_dropped)
 
 forward <- regsubsets(blueKills ~., data=blue_team_stats_first_100_dropped, method="exhaustive")
-
-forward
 summary(model)
 
-plot(first_100$blueKills~first_100$blueWardsPlaced)
-
-plot(first_100$blueTotalGold~first_100$blueKills)
+## logistic regresssion
 
 ## shows object related achievements are more likely linked with the winning
 
@@ -88,4 +84,19 @@ model2
 ## conclusion, drag is more associated compared with other achivements
 
 model
+
+
 ### PART 2: Statistical Estimation
+
+### normal mean?
+
+blue_team_stats
+str(blue_team_stats)
+
+mean(blue_team_stats$blueKills) # mle ## find condifence interval
+                                # bayesian
+
+## re-doing glm?
+
+
+
